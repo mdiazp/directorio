@@ -1,6 +1,6 @@
 <?php
 
-require "../config.php";
+require "/home/kino/my_configs/directorio/config.php";
 require "../LdapHandler.php";
 require "../LdapFilterHandler.php";
 require "../ad_description.php";
