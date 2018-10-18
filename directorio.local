@@ -1,6 +1,10 @@
 server {
-	listen 80;
-	listen [::]:80;
+	# listen 80;
+	# listen [::]:80;
+
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	include snippets/snakeoil.conf;
 
 	# SSL configuration
 	#
@@ -18,12 +22,13 @@ server {
 	#
 	# include snippets/snakeoil.conf;
 
-	root /var/www/html/directorio/web;
+	root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#root /var/www/html/directorio/web;
 
 	# Add index.php to the list if you are using PHP
-	index index.html;
+	index index.html index.php;
 
-	server_name 10.2.24.214 directorio.upr.edu.cu;
+	server_name directorio.local;
 
 	error_log /var/log/nginx/directorio_error.log crit;
 	access_log /var/log/nginx/directorio_access.log;
@@ -36,7 +41,7 @@ server {
 	#	# With php7.0-cgi alone:
 	#	fastcgi_pass 127.0.0.1:9000;
 	#	# With php7.0-fpm:
-		fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+		fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
 	}
 
 	# deny access to .htaccess files, if Apache's document root
@@ -47,26 +52,39 @@ server {
 	}
 
 	location = /search {
-		root /var/www/html/directorio/web;
+		root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#	root /var/www/html/directorio/web;
 
 		try_files $uri /search.php?$args; 
 	}
 
 	location = /axz {
-		root /var/www/html/directorio/web;
+		root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#	root /var/www/html/directorio/web;
 
 		try_files $uri /axz.php?$args; 
 	}
 
 	location = /axzz {
-                root /var/www/html/directorio/web;
+		root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#	root /var/www/html/directorio/web;
 
-                try_files $uri /axzz.php?$args;
-        }
+        try_files $uri /axzz.php?$args;
+    }
 
 	location = /axzstud {
-		root /var/www/html/directorio/web;
+		root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#	root /var/www/html/directorio/web;
 
 		try_files $uri /axzstud.php?$args; 
 	}
+
+	location = /login {
+		root /home/kino/go/src/github.com/mdiazp/directorio/web;
+	#	root /var/www/html/directorio/web;
+
+		try_files $uri /login.php?$args; 
+	#	index login.html;
+	}
+
 }
