@@ -75,6 +75,7 @@ if( isset( $result[0]['employeeid'][0] ) ){
 	$apisigenu_error = '';
 
 	$service_url = 'http://apisigenu.upr.edu.cu/api/student?identification=eq.'.$ci.'&select=id_student';
+	//echo $service_url;
 
 	$curl = curl_init($service_url);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

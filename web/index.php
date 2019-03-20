@@ -6,7 +6,7 @@ include("header.php");
             <div class="container">
                 <div class="row">
                     <figure class="text-center">
-                        <img width="200px" height="200px" src='/img/directorio.svg'> </img>
+                        <img width="200px" height="200px" src='/img/directorio.svg'/>
                     </figure>
                     
                     <h1 class="text-banner-h1 text-capitalize text-center">Directorio</h1>

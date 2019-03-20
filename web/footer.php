@@ -1,5 +1,5 @@
 
-    </div>
+</div>
 
 <footer id="footer" class="footer-style">
     <div class="container">
@@ -7,8 +7,8 @@
         <p>
             Direcci&oacute;n de Informatizaci&oacute;n</br>
             Edificio Docente 4ta Planta</br>
-            <a href="http://elnodo.upr.edu.cu" target="_blank">UPRedes</a> &copy; 2018</br>
-            <a href="mailto:di@up.edu.cu">di@upr.edu.cu</a>
+            <a href="http://di.upr.edu.cu" target="_blank">UPRSoft</a> &copy; 2018</br>
+            <a href="mailto:uprsoft@up.edu.cu">uprsoft@upr.edu.cu</a>
         </p>
     </div>
 </footer>
